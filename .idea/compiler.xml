@@ -14,6 +14,7 @@
         <module name="eureka-client" />
         <module name="spring-cloud-alibaba-sentinel" />
         <module name="spring-cloud-consul" />
+        <module name="registry" />
         <module name="center" />
         <module name="service-zuul" />
         <module name="service-ribbon" />
@@ -34,6 +35,7 @@
       <module name="gateway" target="1.8" />
       <module name="hystrix" target="1.8" />
       <module name="hystrix-server" target="1.8" />
+      <module name="registry" target="1.8" />
       <module name="server-zipkin" target="1.8" />
       <module name="service-feign" target="1.8" />
       <module name="service-miya" target="1.8" />
@@ -61,6 +63,7 @@
       <module name="gateway" options="-parameters" />
       <module name="hystrix" options="-parameters" />
       <module name="hystrix-server" options="-parameters" />
+      <module name="registry" options="-parameters" />
       <module name="server-zipkin" options="-parameters" />
       <module name="service-feign" options="-parameters" />
       <module name="service-miya" options="-parameters" />

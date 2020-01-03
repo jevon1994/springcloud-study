@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-alibaba-sentinel/pom.xml" />
         <option value="$PROJECT_DIR$/center/pom.xml" />
+        <option value="$PROJECT_DIR$/registry/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
