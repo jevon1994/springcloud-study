@@ -1,0 +1,24 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:9000/
+      enabled: true #从配置中心读取文件
+      serviceId: config-server # 配置中心的servieId，即服务名
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8091/eureka/
+
+#关闭Actuator security权限验证
+management.security.enabled: false

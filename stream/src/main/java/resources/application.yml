@@ -1,0 +1,37 @@
+server:
+  port: 8080
+# =========================================
+rabbitmq:                  # 默认的 mq的配置时候，上述的配置方式，可以支持多个 broker
+  port: 5672
+  host: localhost
+  username: guest
+  password: guest
+# =========================================
+application:
+  name: cloud-stream
+# =========================================
+spring:
+  cloud:
+    stream:
+      bindings:
+        input: #消费者绑定的消息通道
+          destination: demo.input.exchange  #消费者绑定的交换器
+          group: demo.input.group                  # 若配置该项，对应的队列就是持久化，并且名称为：demo.input.group。
+        output: #生产者绑定的消息通道
+          destination: demo.input.exchange  #生产者绑定的交换器
+          content-type: text/plain  # 设置消息类型，本次为对象String，如果是json则设置“application/json”
+      rabbit:
+        bindings:
+          input: #消费者消息通道
+            consumer:  #消费者 固定这么写
+              bindingRoutingKey: demo.input.group  # 用来绑定消费者的 routing key
+              acknowledge-mode: auto      #消息ack确定模式
+              max-attempts: 1
+              auto-bind-dlq: true #启用死信队列，默认会生成一个DLX EXCHANGE，当消息重复消费失败后
+#              requeueRejected: false
+#              republishToDlq: false  # 将失败的消息发送到 DLQ，而不是重新排队
+          output: #生产者消息通道
+            producer:    #生产着，固定这样写
+              #  将requeueRejected设置为true（使用republishToDlq = false）会导致消息重新排队并连续重新传递
+              #  除非失败的原因是暂时的
+              routing-key-expression: '''demo.input.group'''  # 需要用这个来指定 RoutingKey

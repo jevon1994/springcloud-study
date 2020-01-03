@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sentinel-demo
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8731 # fallback
+server:
+  port: 8090

@@ -1,0 +1,12 @@
+server:
+  port: 8092
+
+spring:
+  profiles: peer2
+eureka:
+  instance:
+    hostname: peer2
+    prefer-ip-address: true #    通过设置ip让eureka让其他服务注册
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8091/eureka/

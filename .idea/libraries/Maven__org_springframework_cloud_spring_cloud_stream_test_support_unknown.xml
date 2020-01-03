@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:spring-cloud-stream-test-support:unknown">
+    <CLASSES>
+      <root url="jar://D:/workspace/apache-maven-3.6.0/repository/org/springframework/cloud/spring-cloud-stream-test-support/unknown/spring-cloud-stream-test-support-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/workspace/apache-maven-3.6.0/repository/org/springframework/cloud/spring-cloud-stream-test-support/unknown/spring-cloud-stream-test-support-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/workspace/apache-maven-3.6.0/repository/org/springframework/cloud/spring-cloud-stream-test-support/unknown/spring-cloud-stream-test-support-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
