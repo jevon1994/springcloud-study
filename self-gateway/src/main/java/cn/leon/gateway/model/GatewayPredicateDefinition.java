@@ -1,6 +1,7 @@
 package cn.leon.gateway.model;
 
 import lombok.Data;
+import org.springframework.cloud.gateway.handler.predicate.PredicateDefinition;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ import java.util.Map;
  * @Date2020/1/9 12:44
  **/
 @Data
-public class GatewayPredicateDefinition {
+public class GatewayPredicateDefinition extends PredicateDefinition {
     /**
      * 断言对应的Name
      */

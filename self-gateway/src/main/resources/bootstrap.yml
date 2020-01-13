@@ -14,5 +14,7 @@ spring:
         shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
   profiles:
     active: @profiles.active@
+  main:
+    allow-bean-definition-overriding: true
 
 

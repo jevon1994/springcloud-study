@@ -1,11 +1,12 @@
 package cn.leon.gateway.service;
 
+import cn.leon.gateway.dao.GatewayRouteRespository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.event.RefreshRoutesEvent;
 import org.springframework.cloud.gateway.route.RouteDefinition;
-import org.springframework.cloud.gateway.route.RouteDefinitionWriter;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.event.ApplicationContextEvent;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
@@ -17,21 +18,12 @@ import reactor.core.publisher.Mono;
  **/
 @Slf4j
 @Service
-public class DynamicRouteServiceImpl extends ApplicationContextEvent {
+public class DynamicRouteServiceImpl implements ApplicationEventPublisherAware {
 
-    private RouteDefinitionWriter routeDefinitionWriter;
-
-    private ApplicationContext applicationContext;
-
-    /**
-     * Create a new ContextStartedEvent.
-     *
-     * @param source the {@code ApplicationContext} that the event is raised for
-     *               (must not be {@code null})
-     */
-    public DynamicRouteServiceImpl(ApplicationContext source) {
-        super(source);
-    }
+    @Autowired
+    private GatewayRouteRespository gatewayRouteRespository;
+    
+    private ApplicationEventPublisher publisher;
 
     /**
      * 添加路由实体类
@@ -40,8 +32,8 @@ public class DynamicRouteServiceImpl extends ApplicationContextEvent {
      * @return
      */
     public boolean add(RouteDefinition definition) {
-        routeDefinitionWriter.save((Mono<RouteDefinition>) Mono.just(definition).subscribe());
-        applicationContext.publishEvent(new RefreshRoutesEvent(this));
+        gatewayRouteRespository.save(Mono.just(definition)).subscribe();
+        publisher.publishEvent(new RefreshRoutesEvent(this));
         return true;
     }
 
@@ -51,13 +43,13 @@ public class DynamicRouteServiceImpl extends ApplicationContextEvent {
      */
     public boolean update(RouteDefinition definition) {
         try {
-            routeDefinitionWriter.delete(Mono.just(definition.getId()));
+            gatewayRouteRespository.delete(Mono.just(definition.getId()));
         } catch (Exception e) {
             log.error("update 失败。没有找到对应的路由ID :{}", definition.getId());
         }
 
-        routeDefinitionWriter.save((Mono<RouteDefinition>) (Mono.just(definition)).subscribe());
-        applicationContext.publishEvent(new RefreshRoutesEvent(this));
+        gatewayRouteRespository.save((Mono<RouteDefinition>) (Mono.just(definition)).subscribe());
+        publisher.publishEvent(new RefreshRoutesEvent(this));
         return true;
     }
 
@@ -68,8 +60,13 @@ public class DynamicRouteServiceImpl extends ApplicationContextEvent {
      * @return
      */
     public boolean del(String id) {
-        routeDefinitionWriter.delete(Mono.just(id));
-        applicationContext.publishEvent(new RefreshRoutesEvent(this));
+        gatewayRouteRespository.delete(Mono.just(id));
+        publisher.publishEvent(new RefreshRoutesEvent(this));
         return true;
+    }
+
+    @Override
+    public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+        this.publisher = applicationEventPublisher;
     }
 }

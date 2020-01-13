@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.leon</groupId>
-    <artifactId>gateway</artifactId>
+    <artifactId>self-gateway</artifactId>
     <version>1.0</version>
-    <name>gateway</name>
-    <description>gateway</description>
+    <name>self-gateway</name>
+    <description>self-gateway</description>
 
     <properties>
         <java.version>1.8</java.version>

@@ -7,5 +7,5 @@ package cn.leon.gateway.constant;
  * @Date2020/1/10 17:02
  **/
 public class CommonConstant {
-    public static final String ROUTE_KEY = "self:route";
+    public static final String ROUTE_KEY = "gateway";
 }

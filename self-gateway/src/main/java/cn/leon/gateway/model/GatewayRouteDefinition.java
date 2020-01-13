@@ -2,6 +2,7 @@ package cn.leon.gateway.model;
 
 import lombok.Data;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class GatewayRouteDefinition {
     /**
      * 路由规则转发的目标uri
      */
-    private String uri;
+    private URI uri;
     /**
      * 路由执行的顺序
      */
