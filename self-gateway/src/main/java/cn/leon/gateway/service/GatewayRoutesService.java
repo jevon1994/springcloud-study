@@ -1,30 +1,23 @@
 package cn.leon.gateway.service;
 
-import cn.leon.gateway.model.GatewayRoutesEntity;
-import org.springframework.cloud.gateway.filter.FilterDefinition;
-import org.springframework.cloud.gateway.handler.predicate.PredicateDefinition;
-
-import java.util.List;
+import org.springframework.cloud.gateway.route.RouteDefinition;
+import org.springframework.cloud.gateway.route.RouteDefinitionRepository;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 /**
- * @ClassName GatewayRoutesService
+ * @ClassName GatewayRouteDefinition
  * @Description
  * @Author Jevon
- * @Date2020/1/10 15:36
+ * @Date2020/1/8 16:25
  **/
-public interface GatewayRoutesService {
+public interface GatewayRoutesService extends RouteDefinitionRepository {
+    @Override
+    Mono<Void> save(Mono<RouteDefinition> route);
 
-    List<GatewayRoutesEntity> findAll() throws Exception;
+    @Override
+    Mono<Void> delete(Mono<String> routeId);
 
-    String loadRouteDefinition() throws Exception;
-
-    GatewayRoutesEntity save(GatewayRoutesEntity gatewayDefine) throws Exception;
-
-    void deleteById(String id) throws Exception;
-
-    boolean existsById(String id)throws Exception;
-
-    List<PredicateDefinition> getPredicateDefinition(String predicates) ;
-
-    List<FilterDefinition> getFilterDefinition(String filters) ;
+    @Override
+    Flux<RouteDefinition> getRouteDefinitions();
 }

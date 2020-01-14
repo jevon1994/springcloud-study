@@ -1,9 +1,9 @@
-package cn.leon.gateway.service;
+package cn.leon.gateway.service.impl;
 
 import org.springframework.cloud.gateway.event.RefreshRoutesEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @ClassName RefreshRouteService
@@ -11,18 +11,20 @@ import org.springframework.stereotype.Component;
  * @Author Jevon
  * @Date2020/1/9 17:18
  **/
-@Component
+@Service
 public class RefreshRouteService implements ApplicationEventPublisherAware {
+
     private ApplicationEventPublisher publisher;
-    @Override
-    public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
-        this.publisher = applicationEventPublisher;
-    }
 
     /**
      * 刷新路由表
      */
     public void refreshRoutes() {
         publisher.publishEvent(new RefreshRoutesEvent(this));
+    }
+
+    @Override
+    public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
+        this.publisher = applicationEventPublisher;
     }
 }

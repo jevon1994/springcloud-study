@@ -1,7 +1,7 @@
 package cn.leon.gateway.controller;
 
-import cn.leon.gateway.service.DynamicRouteServiceImpl;
-import cn.leon.gateway.service.RefreshRouteService;
+import cn.leon.gateway.service.DynamicRouteService;
+import cn.leon.gateway.service.impl.RefreshRouteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.web.bind.annotation.*;
@@ -13,14 +13,15 @@ import org.springframework.web.bind.annotation.*;
  * @Date2020/1/10 17:17
  **/
 @RestController
+@RequestMapping("/gateway")
 public class GatewayRoutesController {
     @Autowired
     private RefreshRouteService refreshRouteService;
 
     @Autowired
-    private DynamicRouteServiceImpl dynamicRouteService;
+    private DynamicRouteService dynamicRouteService;
 
-    @GetMapping("/refreshRoutes")
+    @GetMapping("/refresh")
     public String refreshRoutes() {
         refreshRouteService.refreshRoutes();
         return "success";
@@ -40,9 +41,9 @@ public class GatewayRoutesController {
      * @param definition
      * @return
      */
-    @RequestMapping(value = "routes/update", method = RequestMethod.POST)
+    @PostMapping("routes/update")
     public String update(@RequestBody RouteDefinition definition) {
-        boolean flag = dynamicRouteService.add(definition);
+        boolean flag = dynamicRouteService.update(definition);
         return flag ? "success" : "failer";
     }
 
@@ -50,7 +51,7 @@ public class GatewayRoutesController {
      * @param serviceId
      * @return
      */
-    @RequestMapping(value = "routes/del", method = RequestMethod.POST)
+    @PostMapping("routes/del")
     public String update(@RequestParam("serviceId") String serviceId) {
         boolean flag = dynamicRouteService.del(serviceId);
         return flag ? "success" : "failer";
