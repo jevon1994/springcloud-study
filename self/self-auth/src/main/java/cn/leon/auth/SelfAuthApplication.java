@@ -1,13 +1,13 @@
-package cn.leon.selfcommon;
+package cn.leon.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SelfCommonApplication {
+public class SelfAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SelfCommonApplication.class, args);
+        SpringApplication.run(SelfAuthApplication.class, args);
     }
 
 }

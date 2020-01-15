@@ -1,10 +1,10 @@
-package cn.leon.gateway;
+package cn.leon.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GatewayApplicationTests {
+class SelfAuthApplicationTests {
 
     @Test
     void contextLoads() {

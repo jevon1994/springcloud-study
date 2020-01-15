@@ -8,14 +8,9 @@ import org.springframework.cloud.client.SpringCloudApplication;
 @SpringCloudApplication
 @ConfigurationPropertiesScan
 @MapperScan(value = "cn.leon.gateway.mapper")
-public class GatewayApplication {
+public class SlefGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class, args);
+        SpringApplication.run(SlefGatewayApplication.class, args);
     }
-
-//    @Bean
-//    public RouteLocator customRoute(RouteLocatorBuilder builder) {
-//        return builder.routes().route(r -> r.path("/image/webp").uri("http://httpbin.org/")).build();
-//    }
 }
