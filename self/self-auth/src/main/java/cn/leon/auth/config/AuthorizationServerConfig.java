@@ -46,6 +46,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     /**
      * 端点安全
+     *
      * @param security
      * @throws Exception
      */
@@ -59,13 +60,14 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     /**
      * 客户端信息配置
+     *
      * @param clients
      * @throws Exception
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.jdbc(dataSource);
-//        clients.withClientDetails(getClienteDetailService()); // 数据库存储客户端信息
+//        clients.jdbc(dataSource);
+        clients.withClientDetails(getClienteDetailService()); // 数据库存储客户端信息
     }
 
     /**
