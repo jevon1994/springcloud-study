@@ -1,5 +1,6 @@
 package cn.leon.auth.config;
 
+import cn.leon.auth.handler.SelfLoginFailureHandler;
 import cn.leon.auth.handler.SelfLoginSuccessfulHandler;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,13 +9,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 /**
  * @ClassName WebSecurityConfig
@@ -29,30 +28,55 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    @Autowired
+    private SelfLoginSuccessfulHandler selfLoginSuccessfulHandler;
+    @Autowired
+    private SelfLoginFailureHandler selfLoginFailureHandler;
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
     }
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/assets/**", "/css/**", "/images/**");
-    }
-    @Bean
-    public AuthenticationSuccessHandler getSuccessHandler(){
-        return new SelfLoginSuccessfulHandler();
-    }
-    @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin()
-                .loginPage("/login")
-                .successHandler(getSuccessHandler())
+                .loginPage("/authentication/require")
+                .loginProcessingUrl("/authentication/form")
+                .successHandler(selfLoginSuccessfulHandler)
+                .failureHandler(selfLoginFailureHandler)
+                .and().authorizeRequests()
+                .antMatchers(
+                        "/authentication/require",
+                        "/authentication/form",
+                        "/**/*.js",
+                        "/**/*.css",
+                        "/**/*.jpg",
+                        "/**/*.png",
+                        "/**/*.woff2"
+                )
+                .permitAll()
+                .anyRequest().authenticated()
                 .and()
-                .authorizeRequests()
-                .antMatchers("/login").permitAll()
-                .anyRequest()
-                .authenticated()
-                .and().csrf().disable().cors();
+                .csrf().disable();
+//        http.formLogin()
+//                .loginPage("/authentication/require")
+//                .loginProcessingUrl("/authentication/form")
+//                .successHandler(getSuccessHandler())
+//                .and()
+//                .authorizeRequests()
+//                .antMatchers(
+//                        "/authentication/require",
+//                        "/authentication/form",
+//                        "/**/*.js",
+//                        "/**/*.css",
+//                        "/**/*.jpg",
+//                        "/**/*.png",
+//                        "/**/*.woff2",
+//                        "/code/*")
+//                .permitAll()
+//                .anyRequest()
+//                .authenticated()
+//                .and().httpBasic().disable().csrf().disable().cors();
 
 //        http.headers().frameOptions().disable().and()
 //                .formLogin()//使用表单登录，不再使用默认httpBasic方式
