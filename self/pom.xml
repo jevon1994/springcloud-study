@@ -19,6 +19,8 @@
         <module>self-common</module>
         <module>self-gateway</module>
         <module>self-auth</module>
+        <module>self-service-alpha</module>
+        <module>self-service-beta</module>
     </modules>
 
     <properties>
