@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @Date2020/1/19 18:00
  **/
 @FrameworkEndpoint
+@RestController
 public class LoginEndpoint {
 
 

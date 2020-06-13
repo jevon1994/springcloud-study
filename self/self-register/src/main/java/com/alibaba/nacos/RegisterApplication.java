@@ -18,6 +18,7 @@ package com.alibaba.nacos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
@@ -27,6 +28,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * 生产建议从官网下载最新版配置运行
  */
 @EnableScheduling
+@RefreshScope
 @SpringBootApplication
 public class RegisterApplication {
 

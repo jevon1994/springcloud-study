@@ -34,7 +34,8 @@ public class SelfRegisterApplication {
         // 全局变量
         System.setProperty("nacos.standalone", "true");
         System.setProperty("server.tomcat.accesslog.enabled", "false");
-//        System.setProperty("server.tomcat.basedir", "logs");
+//        System.set
+//        Property("server.tomcat.basedir", "logs");
         SpringApplication.run(SelfRegisterApplication.class, args);
     }
 }
