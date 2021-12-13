@@ -26,6 +26,11 @@ public class SelfUserDetailService implements UserDetailsService {
     // todo 持久化到数据库
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        String[] data = username.split(":");
+        if("qr".equals(data[0])){
+            // todo 从redis查询
+        }
+
         List<GrantedAuthority> read = new ArrayList() {{
             add(new SimpleGrantedAuthority("read"));
         }};

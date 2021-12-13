@@ -12,17 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableEurekaClient
 @SpringBootApplication
 // 开启自动刷新配置功能，调用/bus/refresh
-@RefreshScope
+//@RefreshScope
 public class ConfigClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(ConfigClientApplication.class, args);
-    }
-
-    @Value("${foo}")
-    String foo;
-
-    @RequestMapping(value = "/hi")
-    public String hi() {
-        return foo;
     }
 }

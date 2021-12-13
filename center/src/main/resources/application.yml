@@ -1,27 +1,27 @@
 server:
   port: 8761
 #
-#eureka:
-#  instance:
-#    hostname: center
-#  client:
-#    serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-#    register-with-eureka: false
-#    fetch-registry: false
-#  server:
-#    enable-self-preservation: true
-#spring:
-#  application:
-#    name: center
+eureka:
+  instance:
+    hostname: center
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: true
+spring:
+  application:
+    name: center
 #
 
-app:
-  id: apollo-test # 使用的 Apollo 的项目（应用）编号
-apollo:
-  meta: http://127.0.0.1:8080 # Apollo Meta Server 地址
-  bootstrap:
-    enabled: true # 是否开启 Apollo 配置预加载功能。默认为 false。
-    eagerLoad:
-      enable: true # 是否开启 Apollo 支持日志级别的加载时机。默认为 false。
-    namespaces: application # 使用的 Apollo 的命名空间，默认为 application。
+#app:
+#  id: apollo-test # 使用的 Apollo 的项目（应用）编号
+#apollo:
+#  meta: http://127.0.0.1:8080 # Apollo Meta Server 地址
+#  bootstrap:
+#    enabled: true # 是否开启 Apollo 配置预加载功能。默认为 false。
+#    eagerLoad:
+#      enable: true # 是否开启 Apollo 支持日志级别的加载时机。默认为 false。
+#    namespaces: application # 使用的 Apollo 的命名空间，默认为 application。

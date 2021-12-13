@@ -1,5 +1,7 @@
 package cn.leon.auth.config;
 
+import cn.leon.auth.confirm.SelfAuthenticationProvider;
+import cn.leon.auth.filter.LoginFilter;
 import cn.leon.auth.handler.SelfLoginFailureHandler;
 import cn.leon.auth.handler.SelfLoginSuccessfulHandler;
 import lombok.SneakyThrows;
@@ -32,11 +34,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private SelfLoginSuccessfulHandler selfLoginSuccessfulHandler;
     @Autowired
     private SelfLoginFailureHandler selfLoginFailureHandler;
+    @Autowired
+    private SelfAuthenticationProvider authenticationProvider;
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+//        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+        auth.authenticationProvider(authenticationProvider());
     }
 
+    @Bean
+    public SelfAuthenticationProvider authenticationProvider(){
+        return new SelfAuthenticationProvider();
+    }
+    @Bean
+    public LoginFilter loginFilter(){
+        return new LoginFilter();
+    }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin()

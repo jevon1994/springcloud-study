@@ -23,8 +23,6 @@
         <module>spring-cloud-cluster</module>
         <module>stream</module>
         <module>spring-cloud-alibaba-sentinel</module>
-        <module>self-register</module>
-        <module>self-gateway</module>
     </modules>
 
     <properties>
@@ -69,10 +67,9 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--监控-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -118,13 +115,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring-boot.version}</version>
-                <exclusions>
-                    <!--排除tomcat依赖-->
-                    <exclusion>
-                        <artifactId>spring-boot-starter-tomcat</artifactId>
-                        <groupId>org.springframework.boot</groupId>
-                    </exclusion>
-                </exclusions>
+<!--                <exclusions>-->
+<!--                    &lt;!&ndash;排除tomcat依赖&ndash;&gt;-->
+<!--                    <exclusion>-->
+<!--                        <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--                        <groupId>org.springframework.boot</groupId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>

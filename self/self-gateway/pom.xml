@@ -6,7 +6,7 @@
         <groupId>cn.leon</groupId>
         <artifactId>self</artifactId>
         <version>1.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
     <groupId>cn.leon</groupId>
     <artifactId>self-gateway</artifactId>

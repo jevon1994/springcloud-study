@@ -10,7 +10,7 @@ public class SelfAuthenticationToken extends AbstractAuthenticationToken {
     private String type;
     private String mobile;
 
-    public SelfAuthenticationToken(Object principal) {
+    public SelfAuthenticationToken(Object principal,Object credentials,String type,String mobile) {
         super(null);
         this.principal = principal;
         this.credentials = credentials;

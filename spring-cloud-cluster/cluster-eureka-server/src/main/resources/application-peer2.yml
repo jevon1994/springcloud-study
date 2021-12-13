@@ -9,4 +9,4 @@ eureka:
     prefer-ip-address: true #    通过设置ip让eureka让其他服务注册
   client:
     serviceUrl:
-      defaultZone: http://peer1:8091/eureka/
+      defaultZone: http://localhost:8091/eureka/
