@@ -3,12 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/center/center.iml" filepath="$PROJECT_DIR$/center/center.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-cluster/cluster-eureka-client/cluster-eureka-client.iml" filepath="$PROJECT_DIR$/spring-cloud-cluster/cluster-eureka-client/cluster-eureka-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-cluster/cluster-eureka-server/cluster-eureka-server.iml" filepath="$PROJECT_DIR$/spring-cloud-cluster/cluster-eureka-server/cluster-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
-      <module fileurl="file://$PROJECT_DIR$/config-client/config-client.iml" filepath="$PROJECT_DIR$/config-client/config-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/kubernetes/kubernetes.iml" filepath="$PROJECT_DIR$/kubernetes/kubernetes.iml" />
       <module fileurl="file://$PROJECT_DIR$/registry/registry.iml" filepath="$PROJECT_DIR$/registry/registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/self/self.iml" filepath="$PROJECT_DIR$/self/self.iml" />
@@ -18,18 +14,10 @@
       <module fileurl="file://$PROJECT_DIR$/self/self-register/self-register.iml" filepath="$PROJECT_DIR$/self/self-register/self-register.iml" />
       <module fileurl="file://$PROJECT_DIR$/self/self-service-alpha/self-service-alpha.iml" filepath="$PROJECT_DIR$/self/self-service-alpha/self-service-alpha.iml" />
       <module fileurl="file://$PROJECT_DIR$/self/self-service-beta/self-service-beta.iml" filepath="$PROJECT_DIR$/self/self-service-beta/self-service-beta.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-sleuth/server-zipkin/server-zipkin.iml" filepath="$PROJECT_DIR$/spring-cloud-sleuth/server-zipkin/server-zipkin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service-feign/service-feign.iml" filepath="$PROJECT_DIR$/service-feign/service-feign.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-sleuth/service-miya/service-miya.iml" filepath="$PROJECT_DIR$/spring-cloud-sleuth/service-miya/service-miya.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service-ribbon/service-ribbon.iml" filepath="$PROJECT_DIR$/service-ribbon/service-ribbon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service-zuul/service-zuul.iml" filepath="$PROJECT_DIR$/service-zuul/service-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/self-spring-cloud-native-core/self-spring-cloud-native-core.iml" filepath="$PROJECT_DIR$/self-spring-cloud-native-core/self-spring-cloud-native-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba-sentinel/spring-cloud-alibaba-sentinel.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba-sentinel/spring-cloud-alibaba-sentinel.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-cluster/spring-cloud-cluster.iml" filepath="$PROJECT_DIR$/spring-cloud-cluster/spring-cloud-cluster.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-consul/spring-cloud-consul.iml" filepath="$PROJECT_DIR$/spring-cloud-consul/spring-cloud-consul.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-sleuth/spring-cloud-sleuth.iml" filepath="$PROJECT_DIR$/spring-cloud-sleuth/spring-cloud-sleuth.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-study.iml" filepath="$PROJECT_DIR$/springcloud-study.iml" />
-      <module fileurl="file://$PROJECT_DIR$/stream/stream.iml" filepath="$PROJECT_DIR$/stream/stream.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-sleuth/zipkin-client/zipkin-client.iml" filepath="$PROJECT_DIR$/spring-cloud-sleuth/zipkin-client/zipkin-client.iml" />
     </modules>
   </component>
 </project>

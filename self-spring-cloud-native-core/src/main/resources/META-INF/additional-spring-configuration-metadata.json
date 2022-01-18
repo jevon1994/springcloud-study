@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "cloud.config.enabled",
+      "type": "java.lang.Boolean",
+      "description": "config enabled",
+      "defaultValue": true
+    }
+  ]
+}

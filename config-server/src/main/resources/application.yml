@@ -3,7 +3,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/mjevon/spring-cloud-config.git
+          uri: https://github.com/jevon1994/spring-cloud-config
       label: master
   application:
     name: config-server

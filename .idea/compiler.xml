@@ -8,27 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="registry" />
-        <module name="cluster-eureka-server" />
         <module name="kubernetes" />
         <module name="self-auth" />
-        <module name="zipkin-client" />
-        <module name="config-client" />
         <module name="center" />
         <module name="self-common" />
         <module name="spring-cloud-alibaba-sentinel" />
-        <module name="service-miya" />
-        <module name="service-feign" />
         <module name="self-register" />
         <module name="config-server" />
-        <module name="service-zuul" />
-        <module name="service-ribbon" />
-        <module name="eureka-client" />
-        <module name="server-zipkin" />
-        <module name="stream" />
+        <module name="self-spring-cloud-native-core" />
         <module name="self-gateway" />
         <module name="self-service-beta" />
         <module name="self-service-alpha" />
-        <module name="cluster-eureka-client" />
         <module name="spring-cloud-consul" />
         <module name="config" />
       </profile>
@@ -54,6 +44,7 @@
       <module name="self-register" target="1.8" />
       <module name="self-service-alpha" target="1.8" />
       <module name="self-service-beta" target="1.8" />
+      <module name="self-spring-cloud-native-core" target="1.8" />
       <module name="server-zipkin" target="1.8" />
       <module name="service-feign" target="1.8" />
       <module name="service-miya" target="1.8" />
@@ -90,6 +81,7 @@
       <module name="self-register" options="-parameters" />
       <module name="self-service-alpha" options="-parameters" />
       <module name="self-service-beta" options="-parameters" />
+      <module name="self-spring-cloud-native-core" options="-parameters" />
       <module name="server-zipkin" options="" />
       <module name="service-feign" options="" />
       <module name="service-miya" options="" />

@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.leon.kubernetes.serviceregistry.CloudNativeAutoConfiguration
+## Bootstrap components
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+cn.leon.kubernetes.config.TestBootStrapProperties,  \
+cn.leon.kubernetes.config.ConfigServiceBootstrapConfiguration, \
+cn.leon.kubernetes.config.DiscoveryClientConfigServiceBootstrapConfiguration

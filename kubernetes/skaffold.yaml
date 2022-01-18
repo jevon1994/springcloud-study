@@ -1,0 +1,21 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: cloud-native-kubernetes
+#      sync:
+#        manual:
+#          - dest:
+#            src:
+#        infer:
+#          - '*.txt'
+  tagPolicy:
+    dateTime:
+      format: "2006-01-02"
+      timezone: "UTC"
+#    sha256: {}
+deploy:
+  kubectl:
+    manifests:
+      - cloud-native-kubernetes-deployment.yaml
+      - cloud-native-kubernetes-service.yaml

@@ -1,0 +1,30 @@
+#Apollo 配置
+app:
+  id: 100004459                            #应用ID
+apollo:
+  #  cacheDir: /opt/data/                       #配置本地配置缓存目录
+  cluster: DEV                           #指定使用哪个集群的配置
+  meta: http://localhost:8080           #DEV环境配置中心地址
+  autoUpdateInjectedSpringProperties: true   #是否开启 Spring 参数自动更新
+  bootstrap:
+    enabled: true                            #是否开启 Apollo
+    namespaces: demo.yml                 #设置 Namespace
+    eagerLoad:
+      enabled: false
+cloud:
+  config:
+    profile: dev
+    server: http://localhost:9000 # 或者是 service-id
+#    label: master
+    enabled: true
+
+#spring:
+#  cloud:
+#    config:
+#      profile: dev
+#      uri: http://localhost:9000/
+#      fail-fast: true
+#      enabled: true
+#      discovery:
+#        service-id: config
+#        enabled: true
