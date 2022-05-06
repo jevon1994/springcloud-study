@@ -1,63 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/examples/common/ejbs" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/examples/common/ear" />
+    <file type="web" url="file://$PROJECT_DIR$/examples/common/servlets/servlet" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/registry/pom.xml" />
-        <option value="$PROJECT_DIR$/self/pom.xml" />
-        <option value="$PROJECT_DIR$/self/self-register/pom.xml" />
-        <option value="$PROJECT_DIR$/kubernetes/pom.xml" />
-        <option value="$PROJECT_DIR$/config/pom.xml" />
-        <option value="$PROJECT_DIR$/self-spring-cloud-native-core/pom.xml" />
-        <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/ac/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/config-client/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-client/pom.xml" />
-        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/hystrix/hystrix-server/pom.xml" />
-        <option value="$PROJECT_DIR$/service-feign/pom.xml" />
-        <option value="$PROJECT_DIR$/service-ribbon/pom.xml" />
-        <option value="$PROJECT_DIR$/service-zuul/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-cluster/cluster-eureka-client/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-cluster/cluster-eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-cluster/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-hystrix-ashboard/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-sleuth/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-sleuth/server-zipkin/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-sleuth/service-miya/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-cloud-sleuth/zipkin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/bussiness/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/common/ear/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/common/ejbs/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/common/primary-source/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/common/projects/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/common/servlets/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/storage/pom.xml" />
         <option value="$PROJECT_DIR$/stream/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State />
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Java language level migration aidsJava</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Ali-Check</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8.0_241" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/classes" />
-  </component>
-  <component name="ThriftCompiler">
-    <compilers />
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -18,31 +18,31 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.logging.log4j</groupId>-->
-<!--            <artifactId>log4j-core</artifactId>-->
-<!--            <version>2.17.0</version>-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <artifactId>log4j-api</artifactId>-->
-<!--                    <groupId>org.apache.logging.log4j</groupId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.logging.log4j</groupId>-->
-<!--            <artifactId>log4j-api</artifactId>-->
-<!--            <version>2.17.0</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.logging.log4j</groupId>-->
+        <!--            <artifactId>log4j-core</artifactId>-->
+        <!--            <version>2.17.0</version>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <artifactId>log4j-api</artifactId>-->
+        <!--                    <groupId>org.apache.logging.log4j</groupId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.logging.log4j</groupId>-->
+        <!--            <artifactId>log4j-api</artifactId>-->
+        <!--            <version>2.17.0</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <artifactId>spring-boot-starter-logging</artifactId>-->
-<!--                    <groupId>org.springframework.boot</groupId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
+            <!--            <exclusions>-->
+            <!--                <exclusion>-->
+            <!--                    <artifactId>spring-boot-starter-logging</artifactId>-->
+            <!--                    <groupId>org.springframework.boot</groupId>-->
+            <!--                </exclusion>-->
+            <!--            </exclusions>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -60,11 +60,6 @@
             <version>2.2.4.RELEASE</version>
             <scope>provided</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-config</artifactId>-->
-<!--            <version>2.2.4.RELEASE</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -75,10 +70,31 @@
             <artifactId>spring-retry</artifactId>
             <version>1.2.5.RELEASE</version>
         </dependency>
-<!--                <dependency>-->
-<!--            <groupId>com.ctrip.framework.apollo</groupId>-->
-<!--            <artifactId>apollo-client</artifactId>-->
-<!--            <version>1.6.0</version>-->
-<!--        </dependency>-->
+        <!--                <dependency>-->
+        <!--            <groupId>com.ctrip.framework.apollo</groupId>-->
+        <!--            <artifactId>apollo-client</artifactId>-->
+        <!--            <version>1.6.0</version>-->
+        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>2.2.4.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>2.2.4.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-kubernetes-core</artifactId>
+            <version>1.1.10.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-actuator-autoconfigure</artifactId>
+        </dependency>
     </dependencies>
 </project>
+
+

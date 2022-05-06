@@ -1,0 +1,8 @@
+/Users/mujian/IdeaProjects/personal/springcloud-study/examples/storage/src/main/java/cn/leon/storage/StorageApplication.java
+/Users/mujian/IdeaProjects/personal/springcloud-study/examples/storage/src/main/java/cn/leon/storage/config/RestTemplateConfig.java
+/Users/mujian/IdeaProjects/personal/springcloud-study/examples/storage/src/main/java/cn/leon/storage/service/StorageService.java
+/Users/mujian/IdeaProjects/personal/springcloud-study/examples/storage/src/main/java/cn/leon/storage/controller/StorageController.java
+/Users/mujian/IdeaProjects/personal/springcloud-study/examples/storage/src/main/java/cn/leon/storage/config/DataSourceConfig.java
+/Users/mujian/IdeaProjects/personal/springcloud-study/examples/storage/src/main/java/cn/leon/storage/persistence/StorageMapper.java
+/Users/mujian/IdeaProjects/personal/springcloud-study/examples/storage/src/main/java/cn/leon/storage/persistence/Storage.java
+/Users/mujian/IdeaProjects/personal/springcloud-study/examples/storage/src/main/java/cn/leon/storage/consumer/ConsumerService.java

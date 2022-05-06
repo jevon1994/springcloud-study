@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ac" />
+        <module name="common" />
+        <module name="self-rocketmq-starter" />
+        <module name="elasticsearch" />
+        <module name="center" />
+        <module name="rocket" />
+        <module name="storage" />
+        <module name="bussiness" />
+        <module name="bo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ac" target="1.8" />
+      <module name="bo" target="1.8" />
+      <module name="bussiness" target="1.8" />
+      <module name="center" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="elasticsearch" target="1.8" />
+      <module name="examples" target="1.8" />
+      <module name="rocket" target="1.8" />
+      <module name="self-rocketmq-starter" target="1.8" />
+      <module name="storage" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ac" options="-parameters" />
+      <module name="bo" options="-parameters" />
+      <module name="bussiness" options="-parameters" />
+      <module name="center" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="rocket" options="-parameters" />
+      <module name="self-rocketmq-starter" options="-parameters" />
+      <module name="storage" options="-parameters" />
+    </option>
+  </component>
+</project>

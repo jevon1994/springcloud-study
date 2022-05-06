@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ac/ac.iml" filepath="$PROJECT_DIR$/ac/ac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bo/bo.iml" filepath="$PROJECT_DIR$/bo/bo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bussiness/bussiness.iml" filepath="$PROJECT_DIR$/bussiness/bussiness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../center/center.iml" filepath="$PROJECT_DIR$/../center/center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../self-elasticsearch-starter/elasticsearch.iml" filepath="$PROJECT_DIR$/../self-elasticsearch-starter/elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples.iml" filepath="$PROJECT_DIR$/examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../springboot-study/mq/rocket/rocket.iml" filepath="$PROJECT_DIR$/../../springboot-study/mq/rocket/rocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../self-rocketmq-starter/self-rocketmq-starter.iml" filepath="$PROJECT_DIR$/../self-rocketmq-starter/self-rocketmq-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/storage/storage.iml" filepath="$PROJECT_DIR$/storage/storage.iml" />
+    </modules>
+  </component>
+</project>

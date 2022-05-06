@@ -12,11 +12,12 @@ public class CloudNativeServiceRegistry implements ServiceRegistry<CloudNativeRe
         this.kubernetesRegistryClient = kubernetesRegistryClient;
     }
 
+
     @Override
     public void register(CloudNativeRegistration registration) {
-//        String registreing = kubernetesRegistryClient.echo("registreing");
-//        System.out.println(registreing + " .....");
-        System.out.println("registreing .....");
+        String registreing = kubernetesRegistryClient.register("registreing");
+        System.out.println(registreing + " .....");
+//        System.out.println("registreing .....");
 
     }
 

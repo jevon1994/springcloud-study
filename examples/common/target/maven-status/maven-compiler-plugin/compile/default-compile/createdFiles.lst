@@ -1,0 +1,5 @@
+cn/leon/examples/common/MqConfiguration.class
+cn/leon/examples/common/YamlPropertySourceFactory.class
+cn/leon/examples/common/Order$OrderBuilder.class
+cn/leon/examples/common/Order.class
+cn/leon/examples/common/SeataProperties.class

@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface KubernetesRegistryClient {
 
     @GetMapping("echo")
-    String echo(@RequestParam String context);
+    String register(@RequestParam String context);
 }

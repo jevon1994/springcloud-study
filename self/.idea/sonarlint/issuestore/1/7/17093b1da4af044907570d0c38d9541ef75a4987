@@ -1,0 +1,16 @@
+
+H
+java:S1948"+Make "principal" transient or serializable.(­ÅƒÑ8¯Ø¸èª.
+G
+java:S1068"*Remove this unused "mobile" private field.(Ë—Æ¿8©Ç”§¬.
+J
+java:S1068"-Remove this unused "principal" private field.(­ÅƒÑ8¯Ø¸èª.
+J
+java:S1068
+"(Remove this unused "type" private field.(–î†ûÿÿÿÿ8©Ç”§¬.
+L
+java:S1068	"/Remove this unused "credentials" private field.(¤÷±Â8©Ç”§¬.
+H
+java:S2160"+Override the "equals" method in this class.(óÁ‚ó8›œµèª.
+J
+java:S1948	"-Make "credentials" transient or serializable.(¤÷±Â8¯Ø¸èª.

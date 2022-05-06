@@ -7,91 +7,68 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="registry" />
-        <module name="kubernetes" />
-        <module name="self-auth" />
+        <module name="cluster-eureka-server" />
+        <module name="ac" />
+        <module name="zipkin-client" />
+        <module name="config-client" />
+        <module name="servlet" />
         <module name="center" />
-        <module name="self-common" />
         <module name="spring-cloud-alibaba-sentinel" />
-        <module name="self-register" />
+        <module name="bo" />
+        <module name="service-miya" />
+        <module name="service-feign" />
         <module name="config-server" />
-        <module name="self-spring-cloud-native-core" />
-        <module name="self-gateway" />
-        <module name="self-service-beta" />
-        <module name="self-service-alpha" />
-        <module name="spring-cloud-consul" />
-        <module name="config" />
+        <module name="service-ribbon" />
+        <module name="service-zuul" />
+        <module name="eureka-client" />
+        <module name="server-zipkin" />
+        <module name="common" />
+        <module name="logging" />
+        <module name="cluster-eureka-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ac" target="1.8" />
+      <module name="bo" target="1.8" />
+      <module name="bussiness" target="1.8" />
       <module name="center" target="1.8" />
       <module name="cluster-eureka-client" target="1.8" />
       <module name="cluster-eureka-server" target="1.8" />
-      <module name="config" target="1.8" />
+      <module name="common" target="1.8" />
       <module name="config-client" target="1.8" />
       <module name="config-server" target="1.8" />
+      <module name="ear" target="1.5" />
+      <module name="ejbs" target="1.5" />
       <module name="eureka-client" target="1.8" />
-      <module name="eureka-server" target="1.8" />
-      <module name="gateway" target="1.8" />
-      <module name="hystrix" target="1.8" />
-      <module name="hystrix-server" target="1.8" />
-      <module name="kubernetes" target="1.8" />
-      <module name="registry" target="1.8" />
-      <module name="self" target="1.8" />
-      <module name="self-auth" target="1.8" />
-      <module name="self-common" target="1.8" />
-      <module name="self-gateway" target="1.8" />
-      <module name="self-register" target="1.8" />
-      <module name="self-service-alpha" target="1.8" />
-      <module name="self-service-beta" target="1.8" />
-      <module name="self-spring-cloud-native-core" target="1.8" />
+      <module name="examples" target="1.8" />
+      <module name="logging" target="1.5" />
+      <module name="primary-source" target="1.5" />
+      <module name="projects" target="1.5" />
       <module name="server-zipkin" target="1.8" />
       <module name="service-feign" target="1.8" />
       <module name="service-miya" target="1.8" />
       <module name="service-ribbon" target="1.8" />
       <module name="service-zuul" target="1.8" />
+      <module name="servlet" target="1.5" />
+      <module name="servlets" target="1.5" />
       <module name="spring-cloud-alibaba-sentinel" target="1.8" />
       <module name="spring-cloud-cluster" target="1.8" />
-      <module name="spring-cloud-consul" target="1.8" />
-      <module name="spring-cloud-hystrix-ashboard" target="1.8" />
       <module name="spring-cloud-sleuth" target="1.8" />
       <module name="springcloud-study" target="1.8" />
+      <module name="storage" target="1.8" />
       <module name="stream" target="1.5" />
       <module name="zipkin-client" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ac" options="-parameters" />
+      <module name="bo" options="-parameters" />
+      <module name="bussiness" options="-parameters" />
       <module name="center" options="-parameters" />
-      <module name="cluster-eureka-client" options="" />
-      <module name="cluster-eureka-server" options="" />
-      <module name="config" options="-parameters" />
-      <module name="config-client" options="" />
+      <module name="common" options="-parameters" />
       <module name="config-server" options="-parameters" />
-      <module name="eureka-client" options="" />
-      <module name="eureka-server" options="-parameters" />
-      <module name="gateway" options="-parameters" />
-      <module name="hystrix" options="-parameters" />
-      <module name="hystrix-server" options="-parameters" />
-      <module name="kubernetes" options="-parameters" />
-      <module name="registry" options="-parameters" />
-      <module name="self-auth" options="-parameters" />
-      <module name="self-common" options="-parameters" />
-      <module name="self-gateway" options="-parameters" />
-      <module name="self-register" options="-parameters" />
-      <module name="self-service-alpha" options="-parameters" />
-      <module name="self-service-beta" options="-parameters" />
-      <module name="self-spring-cloud-native-core" options="-parameters" />
-      <module name="server-zipkin" options="" />
-      <module name="service-feign" options="" />
-      <module name="service-miya" options="" />
-      <module name="service-ribbon" options="" />
-      <module name="service-zuul" options="" />
-      <module name="spring-cloud-alibaba-sentinel" options="" />
-      <module name="spring-cloud-consul" options="-parameters" />
-      <module name="spring-cloud-hystrix-ashboard" options="-parameters" />
-      <module name="stream" options="" />
-      <module name="zipkin-client" options="" />
+      <module name="storage" options="-parameters" />
     </option>
   </component>
 </project>

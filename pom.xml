@@ -23,6 +23,7 @@
         <module>spring-cloud-cluster</module>
         <module>stream</module>
         <module>spring-cloud-alibaba-sentinel</module>
+        <module>examples/common</module>
     </modules>
 
     <properties>
