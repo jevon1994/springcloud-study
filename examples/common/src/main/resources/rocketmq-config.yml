@@ -13,6 +13,16 @@ spring:
           consumer:
             concurrency: 2
             maxAttempts: 2
+      kafka:
+        binder:
+          transaction:
+            producer:
+              batch-timeout:
+        bindings:
+      rabbit:
+        bindings:
+        binder:
+          admin-addresses:
       rocketmq:
         binder:
           name-server: 172.16.143.101:9876

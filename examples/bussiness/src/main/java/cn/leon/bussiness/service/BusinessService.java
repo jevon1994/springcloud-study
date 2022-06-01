@@ -3,6 +3,7 @@ package cn.leon.bussiness.service;
 import cn.leon.bussiness.Order;
 import cn.leon.bussiness.client.OrderClient;
 import cn.leon.bussiness.client.StorageClient;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.common.message.MessageConst;
 import org.apache.rocketmq.spring.support.RocketMQHeaders;
 import org.slf4j.Logger;
@@ -17,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
+@Slf4j
 @Service
 public class BusinessService {
 
@@ -42,8 +44,15 @@ public class BusinessService {
      */
 //    @GlobalTransactional
     public void purchase(String userId, String commodityCode, int orderCount) {
-//        storageClient.deduct(commodityCode, orderCount);
-//        orderClient.create(userId, commodityCode, orderCount);
+        try {
+            orderClient.create(100,userId, commodityCode, new Integer(orderCount));
+        }catch (Exception e){
+            log.error("ex{}",e);
+        }
+
+
+
+
         System.out.println("save order");
     }
 
@@ -63,11 +72,16 @@ public class BusinessService {
     }
 
     @Transactional
+    public void createOrder(String txId){
+
+        //1 save order
+
+        //2 save tx log
+
+    }
+
     public void createOrder(){
 
-        //1 save
-
-        //2 tx log
-
+        // todo: send msg
     }
 }

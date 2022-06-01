@@ -6,10 +6,22 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../center/pom.xml" />
         <option value="$PROJECT_DIR$/../../springboot-study/mq/rocket/pom.xml" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/../self-rocketmq-starter/pom.xml" />
         <option value="$PROJECT_DIR$/../self-elasticsearch-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/../es/pom.xml" />
+        <option value="$PROJECT_DIR$/../../springboot-study/mq/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/bo/pom.xml" />
+        <option value="$PROJECT_DIR$/../self-mq-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/../self-spring-cloud-native-core/pom.xml" />
+        <option value="$PROJECT_DIR$/../stream/pom.xml" />
+        <option value="$PROJECT_DIR$/bussiness/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/ac/pom.xml" />
+        <option value="$PROJECT_DIR$/storage/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8.0_241" project-jdk-type="JavaSDK" />

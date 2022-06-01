@@ -127,13 +127,29 @@ spring:
           content-type: application/json
       rocketmq:
         binder:
-          name-server: 172.16.143.101:9876
+          name-server: 172.16.255.142:30876
+#          name-server: 172.16.143.101:9876
           enable-msg-trace: true
         bindings:
           order-out-0:
             producer:
               group: order-group
               transactional: true
+
+
+feign:
+  hystrix:
+    enabled: false
+ribbon:
+  MaxAutoRetries: '0'
+  ConnectTimeout: '1000'
+  eureka:
+    instance:
+      lease-renewal-interval-in-seconds: '3'
+      lease-expiration-duration-in-seconds: '9'
+    enable: 'true'
+  ReadTimeout: '1000'
+  MaxAutoRetriesNextServer: '0'
 logging:
   level:
     org:

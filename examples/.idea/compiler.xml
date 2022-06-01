@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="1024" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ac" />
-        <module name="common" />
-        <module name="self-rocketmq-starter" />
-        <module name="elasticsearch" />
+        <module name="self-spring-cloud-native-core" />
+        <module name="stream" />
         <module name="center" />
         <module name="rocket" />
-        <module name="storage" />
+        <module name="kafka" />
+        <module name="self-elasticsearch-starter" />
+        <module name="self-mq-starter" />
         <module name="bussiness" />
         <module name="bo" />
+        <module name="es" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,11 +26,17 @@
       <module name="bussiness" target="1.8" />
       <module name="center" target="1.8" />
       <module name="common" target="1.8" />
-      <module name="elasticsearch" target="1.8" />
+      <module name="dataplatform" target="1.8" />
+      <module name="elastic" target="1.8" />
+      <module name="es" target="1.8" />
       <module name="examples" target="1.8" />
+      <module name="kafka" target="1.8" />
       <module name="rocket" target="1.8" />
-      <module name="self-rocketmq-starter" target="1.8" />
+      <module name="self-elasticsearch-starter" target="1.8" />
+      <module name="self-mq-starter" target="1.8" />
+      <module name="self-spring-cloud-native-core" target="1.8" />
       <module name="storage" target="1.8" />
+      <module name="stream" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -38,8 +46,14 @@
       <module name="bussiness" options="-parameters" />
       <module name="center" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="dataplatform" options="-parameters" />
+      <module name="elastic" options="-parameters" />
+      <module name="es" options="-parameters" />
+      <module name="kafka" options="-parameters" />
       <module name="rocket" options="-parameters" />
-      <module name="self-rocketmq-starter" options="-parameters" />
+      <module name="self-elasticsearch-starter" options="-parameters" />
+      <module name="self-mq-starter" options="-parameters" />
+      <module name="self-spring-cloud-native-core" options="-parameters" />
       <module name="storage" options="-parameters" />
     </option>
   </component>

@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../../springboot-study/mq/kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../springboot-study/mq/rocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../springboot-study/mq/rocket/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../center/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../center/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../es/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../es/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ac/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bussiness/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storage/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../self-elasticsearch-starter/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../self-rocketmq-starter/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../self-rocketmq-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../self-mq-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../self-mq-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../self-spring-cloud-native-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../self-spring-cloud-native-core/src/main/resources" charset="UTF-8" />
   </component>
 </project>

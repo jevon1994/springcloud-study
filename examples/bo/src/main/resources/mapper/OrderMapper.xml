@@ -10,8 +10,7 @@
     </resultMap>
 
     <insert id="insert" parameterType="cn.leon.order.persistence.Order">
-    insert into order_tbl (user_id,commodity_code,count,money)
-    values (#{userId,jdbcType=VARCHAR}, #{commodityCode,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, #{money,jdbcType=DECIMAL})
-  </insert>
-
+        insert into order_tbl (user_id,commodity_code,count,money)
+        values (#{userId,jdbcType=VARCHAR}, #{commodityCode,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, #{money,jdbcType=DECIMAL})
+    </insert>
 </mapper>

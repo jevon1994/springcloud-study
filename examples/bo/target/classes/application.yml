@@ -1,6 +1,21 @@
 server:
   port: 8082
+
+#rocketmq:
+#  consumer:
+#    listeners: true
+#  producer:
+#    customized-trace-topic: s
+#  name-server: ss
 spring:
+  #  kafka:
+#    producer:
+#      acks:
+  rabbitmq:
+    password: guest
+    username: guest
+    host: 172.16.143.101
+    port: 5672
   application:
     name: order-service
   datasource:
@@ -11,20 +26,43 @@ spring:
     password: root
   cloud:
     stream:
-      rocketmq:
-        binder:
-          name-server: 172.16.143.101:9876
+      rabbit:
         bindings:
-          send-in-0:
+          order-in-0:
             consumer:
-              orderly: true
-      function:
-        definition: send
+              bindingRoutingKey: k.order.order.create
+          order-out-0:
+            producer:
+              routing-key-expression: '''k.order.*.create'''
+        binder:
+          nodes: 172.16.143.101:5672
+          admin-addresses: 172.16.143.101:5672
       bindings:
-        send-in-0:
-          destination: send-out-0
+        order-in-0:
+          destination: e.order
           content-type: application/json
-          group: in-group
+          group: order.group
+        order-out-0:
+          destination: e.order
+wowjoy:
+  cloud:
+    stream:
+      broker:
+        address: 172.16.143.101:5672
+        username: guest
+        password: guest
+        type: rabbit
+      bindings:
+        order-in-0:
+          consumer:
+            routing-key-expression: '''k.order'''
+        order-out-0:
+          producer:
+            destination: e.order #Exchange
+            bindingRoutingKey:
+            group: order.group
+            tx-message-type: local # local,rocketmq
+
 seata:
   enabled: true
   application-id: order-service

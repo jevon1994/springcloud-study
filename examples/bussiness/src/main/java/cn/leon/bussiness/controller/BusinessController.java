@@ -26,6 +26,13 @@ public class BusinessController {
         return true;
     }
 
+    @GetMapping("/purchase")
+    public Boolean purchase() {
+        businessService.purchase("1001", "2001", 1);
+        return true;
+    }
+
+
 
     /**
      * 购买下单，模拟全局事务回滚
