@@ -1,4 +1,4 @@
-package cn.leon.order.enums;
+package cn.leon.mq.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

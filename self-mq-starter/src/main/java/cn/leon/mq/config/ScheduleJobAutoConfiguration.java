@@ -1,7 +1,7 @@
-package cn.leon.order.config;
+package cn.leon.mq.config;
 
-import cn.leon.order.service.TransactionalMessageManagementService;
-import lombok.AllArgsConstructor;
+import cn.leon.mq.service.ITransactionMessageManagementService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
@@ -12,10 +12,10 @@ import java.util.concurrent.TimeUnit;
 
 
 @Slf4j
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ScheduleJobAutoConfiguration {
 
-    private final TransactionalMessageManagementService managementService;
+    private final ITransactionMessageManagementService managementService;
 
     /**
      * 这里用的是本地的Redis,实际上要做成配置

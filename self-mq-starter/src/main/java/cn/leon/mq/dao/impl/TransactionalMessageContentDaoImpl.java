@@ -1,6 +1,8 @@
-package cn.leon.order.dao;
+package cn.leon.mq.dao.impl;
 
-import cn.leon.order.persistence.TransactionalMessageContent;
+import cn.leon.mq.dao.ResultSetConverter;
+import cn.leon.mq.dao.TransactionalMessageContentDao;
+import cn.leon.mq.model.TransactionalMessageContent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
@@ -9,7 +11,6 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
 @RequiredArgsConstructor
 public class TransactionalMessageContentDaoImpl implements TransactionalMessageContentDao {
 

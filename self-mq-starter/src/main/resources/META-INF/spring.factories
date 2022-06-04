@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.leon.mq.autoconfig.MQAutoConfiguration
+## Bootstrap components
+#org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+
+## Config
+#org.springframework.boot.env.EnvironmentPostProcessor=\

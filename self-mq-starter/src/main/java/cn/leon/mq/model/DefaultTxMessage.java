@@ -1,4 +1,4 @@
-package cn.leon.order.model;
+package cn.leon.mq.model;
 
 import lombok.Builder;
 import lombok.Data;

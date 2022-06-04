@@ -1,17 +1,11 @@
-package cn.leon.order.persistence;
+package cn.leon.mq.model;
 
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-public class TransactionalMessage {
-    private Long id;
-    private LocalDateTime createTime;
-    private LocalDateTime editTime;
-    private String creator;
-    private String editor;
-    private Integer deleted;
+public class TransactionalMessage extends BaseEntity {
     private Integer currentRetryTimes;
     private Integer maxRetryTimes;
     private String queueName;

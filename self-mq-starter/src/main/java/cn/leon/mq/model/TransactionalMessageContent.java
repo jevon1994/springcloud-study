@@ -1,4 +1,4 @@
-package cn.leon.order.persistence;
+package cn.leon.mq.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransactionalMessageContent {
+public class TransactionalMessageContent extends BaseEntity{
     private Long id;
     private Long messageId;
     private String content;

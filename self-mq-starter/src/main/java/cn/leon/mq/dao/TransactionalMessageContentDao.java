@@ -1,6 +1,7 @@
-package cn.leon.order.dao;
+package cn.leon.mq.dao;
 
-import cn.leon.order.persistence.TransactionalMessageContent;
+
+import cn.leon.mq.model.TransactionalMessageContent;
 
 import java.util.List;
 

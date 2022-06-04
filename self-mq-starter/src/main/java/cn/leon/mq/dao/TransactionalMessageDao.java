@@ -1,6 +1,6 @@
-package cn.leon.order.dao;
+package cn.leon.mq.dao;
 
-import cn.leon.order.persistence.TransactionalMessage;
+import cn.leon.mq.model.TransactionalMessage;
 
 import java.time.LocalDateTime;
 import java.util.List;

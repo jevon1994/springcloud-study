@@ -1,8 +1,12 @@
-package cn.leon.order.dao;
+package cn.leon.mq.dao.impl;
 
-import cn.leon.order.enums.TxMessageStatus;
-import cn.leon.order.persistence.TransactionalMessage;
+import cn.leon.mq.dao.PreparedStatementProcessor;
+import cn.leon.mq.dao.ResultSetConverter;
+import cn.leon.mq.dao.TransactionalMessageDao;
+import cn.leon.mq.enums.TxMessageStatus;
+import cn.leon.mq.model.TransactionalMessage;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -17,9 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-@Repository
-@AllArgsConstructor
-public class TransactionalMessageDaoImpl implements TransactionalMessageDao{
+@RequiredArgsConstructor
+public class TransactionalMessageDaoImpl implements TransactionalMessageDao {
 
     private final JdbcTemplate jdbcTemplate;
 

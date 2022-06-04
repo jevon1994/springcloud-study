@@ -1,4 +1,4 @@
-package cn.leon.order.dao;
+package cn.leon.mq.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

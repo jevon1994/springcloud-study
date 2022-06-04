@@ -1,4 +1,12 @@
 package cn.leon.mq.service;
 
-public interface ITransactionMessageService {
+import cn.leon.mq.model.TransactionalMessage;
+
+public interface ITransactionMessageManagementService {
+
+    void saveTransactionalMessageRecord(TransactionalMessage record, String content);
+
+    void sendMessageSync(TransactionalMessage record, String content);
+
+    void processPendingCompensationRecords();
 }
