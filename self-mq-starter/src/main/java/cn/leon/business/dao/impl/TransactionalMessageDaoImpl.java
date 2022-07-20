@@ -1,17 +1,15 @@
-package cn.leon.mq.dao.impl;
+package cn.leon.business.dao.impl;
 
-import cn.leon.mq.dao.PreparedStatementProcessor;
-import cn.leon.mq.dao.ResultSetConverter;
-import cn.leon.mq.dao.TransactionalMessageDao;
-import cn.leon.mq.enums.TxMessageStatus;
-import cn.leon.mq.model.TransactionalMessage;
-import lombok.AllArgsConstructor;
+import cn.leon.business.dao.PreparedStatementProcessor;
+import cn.leon.business.dao.ResultSetConverter;
+import cn.leon.business.dao.TransactionalMessageDao;
+import cn.leon.business.enums.TxMessageStatus;
+import cn.leon.business.model.TransactionalMessage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
 import java.sql.Statement;

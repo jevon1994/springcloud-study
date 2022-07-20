@@ -1,4 +1,4 @@
-package cn.leon.mq.enums;
+package cn.leon.business.enums;
 
 import lombok.Builder;
 import lombok.Getter;

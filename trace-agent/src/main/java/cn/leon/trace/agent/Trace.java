@@ -1,5 +1,6 @@
 package cn.leon.trace.agent;
 
+import cn.leon.trace.agent.config.ThreadLocalConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -7,8 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Data
 @Slf4j
@@ -17,31 +17,43 @@ import java.util.concurrent.atomic.AtomicInteger;
 @NoArgsConstructor
 public class Trace {
 
-    @Builder.Default
-    private AtomicInteger counter = new AtomicInteger(0);
+    private final ConcurrentHashMap<String, Integer> tarceMap = new ConcurrentHashMap<>();
 
     private String traceId;
-    //curr
+
+    /**
+     * curr
+     */
     private String spanId;
     private String parentSpanId;
-    private Date sstime;
-    private Date srtime;
-    private Date cstime;
-    private Date crtime;
+
+    /**
+     * time
+     */
+    private String sstime;
+    @Builder.Default
+    private String srtime = ThreadLocalConfig.now();
+    private String cstime;
+    private String crtime;
+
     private String appName;
 
-    public synchronized String nextSpanId(String currSpanId) {
-        BigDecimal bigDecimal = new BigDecimal(currSpanId);
-        BigDecimal addOne = new BigDecimal("1");
-        BigDecimal nextSpanId = bigDecimal.add(addOne);
-        if (counter.get() > 0) {
-            double v = counter.intValue() * 0.1;
-            final BigDecimal bigDecimal1 = new BigDecimal(String.valueOf(v));
-            nextSpanId = nextSpanId.add(bigDecimal1);
-        }
-        System.out.println(counter.get());
-        log.info("currSpanId: {},nextSpanId: {}", currSpanId, nextSpanId);
-        counter.incrementAndGet();
-        return nextSpanId.toString();
+    public synchronized String nextSpanId(String lastParentSpanId, String lastSpanId) {
+        /**
+         * if exists
+         * etc: [0]: lastPid  [1]: lastSid
+         * nextSpanId = [lastSid + 1].[count(lastPid)]
+         * 0.0,1.1 = > 1.1,2.1/2.2/2.3
+         * 1.1,2.2/2.1 => 2.2/2.1,3.1/3.2/3.3
+         * 2.2,3.1 => 3.1,4.1/4.2
+         */
+        Integer integer = tarceMap.computeIfAbsent(lastParentSpanId, val -> 0);
+        BigDecimal lastPid = new BigDecimal(lastSpanId);
+        BigDecimal parentLevel = lastPid.setScale(0, BigDecimal.ROUND_DOWN).add(BigDecimal.ONE);
+        Integer lastPidCount = tarceMap.computeIfPresent(lastParentSpanId, (k, v) -> v + 1);
+        final String nextSpan = integer == 0 ? "1" : String.valueOf(lastPidCount);
+        final String nextSpanId = parentLevel.toString().concat(".").concat(nextSpan);
+        log.info("lastParentSpanId: {},lastSpanId: {},nextSpanId: {}", lastParentSpanId, lastSpanId, nextSpanId);
+        return nextSpanId;
     }
 }

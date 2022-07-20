@@ -1,2 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-cn.leon.trace.agent.TraceAutoConfig
+cn.leon.trace.agent.config.TraceAutoConfig
+org.springframework.boot.env.EnvironmentPostProcessor=\
+cn.leon.trace.agent.CloudTracePropertySource

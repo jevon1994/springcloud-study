@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 //@Slf4j
-@FeignClient(name = "ORDER-SERVICE1")
+@FeignClient(value = "order-service"
+        ,url = "http://localhost:8082/"
+)
 public interface OrderClient {
 
     @GetMapping("/api/order/debit")

@@ -1,7 +1,12 @@
 package cn.leon.es.service;
 
-public interface DocumentService {
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
-    void search();
+@Service
+@AllArgsConstructor
+public class DocumentServiceImpl implements DocumentService {
+
+
 
 }

@@ -1,1 +1,16 @@
-
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+      #      client:
+#        reactive:
+#          endpoints: 172.16.255.141:30930
+      cluster-nodes: 172.16.255.143:30930
+      cluster-name: k8s-deploy
+logging:
+  level:
+    org:
+      elasticsearch:
+        client: trace
+    org.springframework.data.elasticsearch.client.WIRE: TRACE

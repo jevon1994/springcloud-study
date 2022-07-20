@@ -3,6 +3,7 @@ package cn.leon.bussiness.service;
 import cn.leon.bussiness.Order;
 import cn.leon.bussiness.client.OrderClient;
 import cn.leon.bussiness.client.StorageClient;
+import io.netty.util.concurrent.CompleteFuture;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.common.message.MessageConst;
 import org.apache.rocketmq.spring.support.RocketMQHeaders;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 @Slf4j
 @Service
@@ -38,22 +40,18 @@ public class BusinessService {
     /**
      * 减库存，下订单
      *
-     * @param userId
+//     * @param userId
      * @param commodityCode
      * @param orderCount
      */
 //    @GlobalTransactional
     public void purchase(String userId, String commodityCode, int orderCount) {
         try {
-            orderClient.create(100,userId, commodityCode, new Integer(orderCount));
+            CompletableFuture.runAsync(() -> orderClient.create(100,userId, commodityCode, new Integer(orderCount)));
+            CompletableFuture.runAsync(() -> storageClient.deduct(commodityCode,orderCount));
         }catch (Exception e){
             log.error("ex{}",e);
         }
-
-
-
-
-        System.out.println("save order");
     }
 
 

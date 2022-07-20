@@ -14,6 +14,7 @@ public class FeignRequestInterceptor implements RequestInterceptor {
 
     @Override
     public void apply(RequestTemplate template) {
+        System.out.println(Thread.currentThread().getName() + ":" + Thread.currentThread().getId());
 //        storageClient.deduct("111", 1);
     }
 }

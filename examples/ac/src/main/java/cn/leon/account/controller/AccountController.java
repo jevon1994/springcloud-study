@@ -19,4 +19,10 @@ public class AccountController {
         accountService.debit(userId, orderMoney);
     }
 
+
+    @GetMapping("hello")
+    public void hello(){
+        System.out.println("hello");
+    }
+
 }

@@ -1,6 +1,8 @@
 package cn.leon.trace.agent;
 
+import cn.leon.trace.agent.config.ThreadLocalConfig;
 import com.alibaba.ttl.TransmittableThreadLocal;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,31 +13,35 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 @Slf4j
+@AllArgsConstructor
 public class MvcInterceptor extends HandlerInterceptorAdapter {
 
     private String appName;
-
-    public MvcInterceptor(String appName) {
-        this.appName = appName;
-    }
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
 
         String traceId = request.getHeader(ThreadLocalConfig.TRACE_ID);
-        String currspanId = request.getHeader(ThreadLocalConfig.SPAN_ID);
-        String currparentSpanId = request.getHeader(ThreadLocalConfig.PARENT_SPAN_ID);
-        String srtime = request.getHeader(ThreadLocalConfig.SERVER_RECEIVE_TIME);
-        String sstime = request.getHeader(ThreadLocalConfig.SERVER_SEND_TIME);
-        String crtime = request.getHeader(ThreadLocalConfig.CLIENT_RECEIVE_TIME);
-        String cstime = request.getHeader(ThreadLocalConfig.CLIENT_SEND_TIME);
+        String lastSpanId = request.getHeader(ThreadLocalConfig.SPAN_ID);
+        String lastParentSpanId = request.getHeader(ThreadLocalConfig.PARENT_SPAN_ID);
 
-        Trace trace = StringUtils.isEmpty(traceId) ? getDefaultTrace(appName)
-                : getCurrentTrace(appName, traceId, currparentSpanId, currspanId);
+        Trace trace = StringUtils.isEmpty(traceId) ?
+                Trace.builder()
+                        .traceId(UUID.randomUUID().toString())
+                        .parentSpanId(ThreadLocalConfig.DEFAULT_PARENT_SPAN_ID)
+                        .spanId(ThreadLocalConfig.DEFAULT_SPAN_ID)
+                        .appName(appName)
+                        .build() : Trace.builder()
+                .traceId(traceId)
+                .parentSpanId(lastParentSpanId)
+                .spanId(lastSpanId)
+                .appName(appName)
+                .build();
+
         TransmittableThreadLocal<Trace> transmittableThreadLocal = ThreadLocalConfig.getTransmittableThreadLocal();
         transmittableThreadLocal.set(trace);
 
-        log.info("service receive,appname: {},traceId: {},parentspanid: {},spanid: {}", appName, trace.getTraceId(), trace.getParentSpanId(), trace.getSpanId());
+        response.addHeader(ThreadLocalConfig.SERVER_RECEIVE_TIME, String.valueOf(System.currentTimeMillis()));
         return true;
     }
 
@@ -45,25 +51,9 @@ public class MvcInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
-        // 请求结束删除信息
+        Trace trace = ThreadLocalConfig.getTransmittableThreadLocal().get();
+        log.info("appname: {},traceId: {},parentspanid: {},spanid: {},srtime: {},sstime: {}", appName, trace.getTraceId(), trace.getParentSpanId(), trace.getSpanId()
+                , trace.getSrtime(), trace.getSstime());
         ThreadLocalConfig.getTransmittableThreadLocal().remove();
-    }
-
-    public Trace getDefaultTrace(String appName) {
-        return Trace.builder()
-                .traceId(UUID.randomUUID().toString())
-                .parentSpanId(ThreadLocalConfig.DEFAULT_PARENT_SPAN_ID)
-                .spanId(ThreadLocalConfig.DEFAULT_SPAN_ID)
-                .appName(appName)
-                .build();
-    }
-
-    public Trace getCurrentTrace(String appName, String traceId, String currParentSpanId, String currSpanId) {
-        return Trace.builder()
-                .traceId(traceId)
-                .parentSpanId(currParentSpanId)
-                .spanId(currSpanId)
-                .appName(appName)
-                .build();
     }
 }

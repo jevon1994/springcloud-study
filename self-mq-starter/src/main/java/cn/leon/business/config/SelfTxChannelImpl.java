@@ -1,8 +1,8 @@
-package cn.leon.mq.config;
+package cn.leon.business.config;
 
-import cn.leon.mq.enums.ExchangeType;
-import cn.leon.mq.model.TransactionalMessage;
-import cn.leon.mq.service.ITransactionMessageManagementService;
+import cn.leon.business.enums.ExchangeType;
+import cn.leon.business.model.TransactionalMessage;
+import cn.leon.business.service.ITransactionMessageManagementService;
 import lombok.AllArgsConstructor;
 import org.springframework.cloud.stream.binder.rabbit.properties.RabbitBindingProperties;
 import org.springframework.cloud.stream.binder.rabbit.properties.RabbitExtendedBindingProperties;

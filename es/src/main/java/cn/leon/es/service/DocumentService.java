@@ -1,16 +1,6 @@
-package cn.leon.es;
+package cn.leon.es.service;
 
-import lombok.AllArgsConstructor;
-import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
-import org.springframework.stereotype.Service;
+public interface DocumentService {
 
-@Service
-@AllArgsConstructor
-public class DocumentService {
-
-    private ElasticsearchRestTemplate elasticsearchRestTemplate;
-
-    public void search(){
-    }
 
 }

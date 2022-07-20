@@ -1,4 +1,4 @@
-package cn.leon.mq.config;
+package cn.leon.business.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

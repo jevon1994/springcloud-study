@@ -1,6 +1,6 @@
-package cn.leon.mq.service;
+package cn.leon.business.service;
 
-import cn.leon.mq.model.TransactionalMessage;
+import cn.leon.business.model.TransactionalMessage;
 
 public interface ITransactionMessageManagementService {
 

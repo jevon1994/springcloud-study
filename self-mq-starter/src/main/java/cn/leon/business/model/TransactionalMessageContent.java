@@ -1,4 +1,4 @@
-package cn.leon.mq.model;
+package cn.leon.business.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

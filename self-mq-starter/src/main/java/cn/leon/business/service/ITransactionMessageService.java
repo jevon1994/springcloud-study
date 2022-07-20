@@ -1,7 +1,7 @@
-package cn.leon.mq.service;
+package cn.leon.business.service;
 
-import cn.leon.mq.enums.DefaultDestination;
-import cn.leon.mq.model.DefaultTxMessage;
+import cn.leon.business.enums.DefaultDestination;
+import cn.leon.business.model.DefaultTxMessage;
 
 public interface ITransactionMessageService {
 

@@ -1,12 +1,11 @@
-package cn.leon.mq.dao.impl;
+package cn.leon.business.dao.impl;
 
-import cn.leon.mq.dao.ResultSetConverter;
-import cn.leon.mq.dao.TransactionalMessageContentDao;
-import cn.leon.mq.model.TransactionalMessageContent;
+import cn.leon.business.dao.ResultSetConverter;
+import cn.leon.business.dao.TransactionalMessageContentDao;
+import cn.leon.business.model.TransactionalMessageContent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
-import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -18,7 +18,7 @@
         <module>bussiness</module>
         <module>ac</module>
         <module>storage</module>
-        <module>bo</module>
+<!--        <module>bo</module>-->
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -31,6 +31,13 @@
         <springboot.version>2.2.4.RELEASE</springboot.version>
         <druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
     </properties>
+    <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>cn.leon</groupId>-->
+<!--            <artifactId>trace-agent</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -83,11 +90,11 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid-spring-boot-starter.version}</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>io.seata</groupId>-->
-<!--                <artifactId>seata-spring-boot-starter</artifactId>-->
-<!--                <version>${seata.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -114,11 +121,11 @@
 <!--                <type>pom</type>-->
 <!--                <scope>import</scope>-->
 <!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba.cloud</groupId>-->
-<!--                <artifactId>spring-cloud-alibaba-seata</artifactId>-->
-<!--                <version>2.1.0.RELEASE</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-seata</artifactId>
+                <version>2.1.0.RELEASE</version>
+            </dependency>
 <!--            <dependency>-->
 <!--                <groupId>org.springframework</groupId>-->
 <!--                <artifactId>spring-context</artifactId>-->
@@ -139,11 +146,11 @@
 <!--                <groupId>org.springframework</groupId>-->
 <!--                <version>5.1.2.RELEASE</version>-->
 <!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>io.seata</groupId>-->
-<!--                <artifactId>seata-all</artifactId>-->
-<!--                <version>${seata.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-all</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>

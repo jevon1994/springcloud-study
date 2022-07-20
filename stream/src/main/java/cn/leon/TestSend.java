@@ -13,7 +13,6 @@ public class TestSend {
     @Autowired
     private Sink orderProcessor;
 
-    AbstractQueuedSynchronizer
 
     public void send(String message) {
         //该data可以为对象也可以为字符串

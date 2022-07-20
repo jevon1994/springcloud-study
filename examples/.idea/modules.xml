@@ -2,17 +2,46 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ac/ac.iml" filepath="$PROJECT_DIR$/ac/ac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../agent/agent.iml" filepath="$PROJECT_DIR$/../agent/agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../agent/agent-test/agent-test.iml" filepath="$PROJECT_DIR$/../agent/agent-test/agent-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-agent/apm-agent.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-agent/apm-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-agent-core/apm-agent-core.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-agent-core/apm-agent-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/feign-default-http-9.x-plugin/apm-feign-default-http-9.x-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/feign-default-http-9.x-plugin/apm-feign-default-http-9.x-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-http-plugin/apm-jdk-http-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-http-plugin/apm-jdk-http-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-threading-plugin/apm-jdk-threading-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-threading-plugin/apm-jdk-threading-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-threadpool-plugin/apm-jdk-threadpool-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-threadpool-plugin/apm-jdk-threadpool-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/resttemplate-4.x-plugin/apm-resttemplate-4.3.x-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/resttemplate-4.x-plugin/apm-resttemplate-4.3.x-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/apm-sdk-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/apm-sdk-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/mvc-annotation-5.x-plugin/apm-springmvc-annotation-5.x-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/mvc-annotation-5.x-plugin/apm-springmvc-annotation-5.x-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/mvc-annotation-commons/apm-springmvc-annotation-commons.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/mvc-annotation-commons/apm-springmvc-annotation-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/tomcat-thread-pool-plugin/apm-tomcat-thread-pool-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/tomcat-thread-pool-plugin/apm-tomcat-thread-pool-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/bo/bo.iml" filepath="$PROJECT_DIR$/bo/bo.iml" />
       <module fileurl="file://$PROJECT_DIR$/bussiness/bussiness.iml" filepath="$PROJECT_DIR$/bussiness/bussiness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../agent/bytebuddy/bytebuddy.iml" filepath="$PROJECT_DIR$/../agent/bytebuddy/bytebuddy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../center/center.iml" filepath="$PROJECT_DIR$/../center/center.iml" />
       <module fileurl="file://$PROJECT_DIR$/../es/es.iml" filepath="$PROJECT_DIR$/../es/es.iml" />
       <module fileurl="file://$PROJECT_DIR$/examples.iml" filepath="$PROJECT_DIR$/examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/java-agent.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/java-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-commons/java-agent-commons.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-commons/java-agent-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/java-agent-sniffer.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/java-agent-sniffer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-commons/apm-util/java-agent-util.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-commons/apm-util/java-agent-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/jetty-plugin/jetty-plugins.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/jetty-plugin/jetty-plugins.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../springboot-study/mq/kafka/kafka.iml" filepath="$PROJECT_DIR$/../../springboot-study/mq/kafka/kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../kubernetes/kubernetes.iml" filepath="$PROJECT_DIR$/../kubernetes/kubernetes.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../springboot-study/mq/rocket/rocket.iml" filepath="$PROJECT_DIR$/../../springboot-study/mq/rocket/rocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/../self-elasticsearch-starter/self-elasticsearch-starter.iml" filepath="$PROJECT_DIR$/../self-elasticsearch-starter/self-elasticsearch-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/../self-mq-starter/self-mq-starter.iml" filepath="$PROJECT_DIR$/../self-mq-starter/self-mq-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/../self-spring-cloud-native-core/self-spring-cloud-native-core.iml" filepath="$PROJECT_DIR$/../self-spring-cloud-native-core/self-spring-cloud-native-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/spring-cloud/spring-cloud.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/spring-cloud/spring-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/spring-commons/spring-commons.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/spring-commons/spring-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-mvc-plugin/spring-mvc-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-mvc-plugin/spring-mvc-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/spring-plugins.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/spring-plugins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../demo/ssh-tunnel/ssh-tunnel/ssh-tunnel.iml" filepath="$PROJECT_DIR$/../../../demo/ssh-tunnel/ssh-tunnel/ssh-tunnel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/storage/storage.iml" filepath="$PROJECT_DIR$/storage/storage.iml" />
       <module fileurl="file://$PROJECT_DIR$/../stream/stream.iml" filepath="$PROJECT_DIR$/../stream/stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/tomcat-7.x-8.x-plugin/tomcat-7.x-8.x-plugin.iml" filepath="$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/tomcat-7.x-8.x-plugin/tomcat-7.x-8.x-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../trace-agent/trace-agent.iml" filepath="$PROJECT_DIR$/../trace-agent/trace-agent.iml" />
     </modules>
   </component>
 </project>

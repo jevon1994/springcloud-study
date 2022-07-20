@@ -1,6 +1,6 @@
-package cn.leon.mq.dao;
+package cn.leon.business.dao;
 
-import cn.leon.mq.model.TransactionalMessage;
+import cn.leon.business.model.TransactionalMessage;
 
 import java.time.LocalDateTime;
 import java.util.List;

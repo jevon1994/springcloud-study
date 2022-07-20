@@ -1,12 +1,7 @@
 package cn.leon.storage.consumer;
 
 import cn.leon.storage.Order;
-import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
-import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
-import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
-import org.apache.rocketmq.common.message.MessageExt;
 import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageHeaders;
@@ -82,20 +77,4 @@ public class ConsumerService{
         log.error("Handling ERROR, errorMessage = {} ", errorMessage);
     }
 
-
-    public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) {
-        log.info("消费者线程监听到消息。");
-        try {
-            for (MessageExt message : list) {
-                log.info("开始处理订单数据，准备增加积分....");
-                Order order = JSONObject.parseObject(message.getBody(), Order.class);
-                log.info(order.toString());
-                int i = 10 / 0;
-            }
-            return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
-        } catch (Exception e) {
-            log.error("处理消费者数据发生异常。{}", e);
-            return ConsumeConcurrentlyStatus.RECONSUME_LATER;
-        }
-    }
 }

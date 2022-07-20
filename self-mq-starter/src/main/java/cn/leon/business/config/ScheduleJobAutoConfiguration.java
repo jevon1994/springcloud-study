@@ -1,6 +1,6 @@
-package cn.leon.mq.config;
+package cn.leon.business.config;
 
-import cn.leon.mq.service.ITransactionMessageManagementService;
+import cn.leon.business.service.ITransactionMessageManagementService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.Redisson;

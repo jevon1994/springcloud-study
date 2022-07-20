@@ -1,4 +1,4 @@
-package cn.leon.mq.config;
+package cn.leon.business.config;
 
 import org.springframework.messaging.MessageChannel;
 

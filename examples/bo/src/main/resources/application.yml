@@ -1,6 +1,5 @@
 server:
   port: 8082
-
 #rocketmq:
 #  consumer:
 #    listeners: true
@@ -12,10 +11,13 @@ spring:
 #    producer:
 #      acks:
   rabbitmq:
-    password: guest
-    username: guest
-    host: 172.16.143.101
-    port: 5672
+    password: admin
+    username: admin123
+    host: 172.16.255.141
+    port: 17725
+    publisher-confirm-type: correlated
+    publisher-confirms: true
+    publisher-returns: true
   application:
     name: order-service
   datasource:
@@ -26,42 +28,65 @@ spring:
     password: root
   cloud:
     stream:
+      # Binder 配置项，对应 BinderProperties Map
+      binders:
+        rabbit001:
+          type: rabbit # 设置 Binder 的类型
+          environment: # 设置 Binder 的环境配置
+            # 如果是 RabbitMQ 类型的时候，则对应的是 RabbitProperties 类
+            spring:
+              rabbitmq:
+                host: 172.16.255.143
+                port: 17725
+                username: admin # RabbitMQ 服务的账号
+                password: admin123 # RabbitMQ 服务的密码
+                publisher-returns: true # 设置消息是否回退，默认为 false
+                publisher-confirm-type: correlated # 设置开启消息确认模型，默认为 null 不进行确认
       rabbit:
         bindings:
           order-in-0:
             consumer:
-              bindingRoutingKey: k.order.order.create
+              bindingRoutingKey: k.orderp.orderc.create
           order-out-0:
             producer:
-              routing-key-expression: '''k.order.*.create'''
+              confirmAckChannel: acks
+              exchangeType: direct
+#              routing-key-expression: '''k.order.*.create'''
         binder:
-          nodes: 172.16.143.101:5672
-          admin-addresses: 172.16.143.101:5672
+          nodes: 172.16.255.141:17725
       bindings:
         order-in-0:
-          destination: e.order
-          content-type: application/json
-          group: order.group
+          destination: q.orderc
+          group: orderp.create
+#          consumer:
+#            routing-key-expression: '''k.order'''
         order-out-0:
-          destination: e.order
-wowjoy:
-  cloud:
-    stream:
-      broker:
-        address: 172.16.143.101:5672
-        username: guest
-        password: guest
-        type: rabbit
-      bindings:
-        order-in-0:
-          consumer:
-            routing-key-expression: '''k.order'''
-        order-out-0:
+          destination: e.order #Exchange
+          content-type: application/json # 内容格式。这里使用 JSON
+#          binder: rabbit001 # 设置使用的 Binder 名字
           producer:
-            destination: e.order #Exchange
-            bindingRoutingKey:
-            group: order.group
-            tx-message-type: local # local,rocketmq
+            error-channel-enabled: true # 是否开启异常 Channel，默认为 false 关闭
+          group: order.group
+#      default-binder: rabbit
+  main:
+    allow-bean-definition-overriding: true
+
+cloud:
+  stream:
+    broker:
+      address: 172.16.143.101:17725
+      username: guest
+      password: guest
+      type: rabbit,kafka,rocketmq
+    bindings:
+      order-in-0:
+        consumer:
+          routing-key-expression: '''k.order'''
+      order-out-0:
+        producer:
+          destination: e.order #Exchange
+          group: order.group
+          tx-message-type: local # local,rocketmq
 
 seata:
   enabled: true
@@ -171,3 +196,7 @@ seata:
       connect-timeout: 2000
       username: ""
       password: ""
+#management:
+
+#  health.rabbitmq.enabled: false
+

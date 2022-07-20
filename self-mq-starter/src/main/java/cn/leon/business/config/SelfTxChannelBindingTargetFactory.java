@@ -1,6 +1,6 @@
-package cn.leon.mq.config;
+package cn.leon.business.config;
 
-import cn.leon.mq.service.ITransactionMessageManagementService;
+import cn.leon.business.service.ITransactionMessageManagementService;
 import org.springframework.cloud.stream.binder.rabbit.properties.RabbitExtendedBindingProperties;
 import org.springframework.cloud.stream.binding.AbstractBindingTargetFactory;
 import org.springframework.cloud.stream.binding.MessageChannelConfigurer;

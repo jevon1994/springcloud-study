@@ -1,11 +1,11 @@
-package cn.leon.mq.service.impl;
+package cn.leon.business.service.impl;
 
-import cn.leon.mq.dao.TransactionalMessageContentDao;
-import cn.leon.mq.dao.TransactionalMessageDao;
-import cn.leon.mq.enums.TxMessageStatus;
-import cn.leon.mq.model.TransactionalMessage;
-import cn.leon.mq.model.TransactionalMessageContent;
-import cn.leon.mq.service.ITransactionMessageManagementService;
+import cn.leon.business.dao.TransactionalMessageContentDao;
+import cn.leon.business.dao.TransactionalMessageDao;
+import cn.leon.business.enums.TxMessageStatus;
+import cn.leon.business.model.TransactionalMessage;
+import cn.leon.business.model.TransactionalMessageContent;
+import cn.leon.business.service.ITransactionMessageManagementService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

@@ -13,7 +13,7 @@ public class StorageClient {
     private RestTemplate restTemplate;
 
     public void deduct(String commodityCode, int orderCount) {
-        String url = "http://127.0.0.1:8081/api/storage/deduct?commodityCode=" + commodityCode + "&count=" + orderCount;
+        String url = "http://localhost:8081/api/storage/deduct?commodityCode=" + commodityCode + "&count=" + orderCount;
         try {
             restTemplate.getForEntity(url, Void.class);
         } catch (Exception e) {

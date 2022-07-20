@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../../../demo/ssh-tunnel/ssh-tunnel/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../springboot-study/mq/kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../springboot-study/mq/rocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../../springboot-study/mq/rocket/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../agent/agent-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../agent/agent-test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../agent/bytebuddy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../agent/bytebuddy/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../center/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../center/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../es/src/main/java" charset="UTF-8" />
@@ -16,10 +21,40 @@
     <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storage/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/storage/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../kubernetes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../kubernetes/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../self-elasticsearch-starter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../self-mq-starter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../self-mq-starter/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../self-spring-cloud-native-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../self-spring-cloud-native-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../trace-agent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../trace-agent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-commons/apm-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-protocol/apm-network/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-agent-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-agent-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-agent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/feign-default-http-9.x-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/feign-default-http-9.x-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-mvc-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-mvc-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/mvc-annotation-5.x-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/mvc-annotation-5.x-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/mvc-annotation-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/mvc-annotation-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/resttemplate-4.x-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/resttemplate-4.x-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/spring-plugins/spring-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/tomcat-7.x-8.x-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/tomcat-7.x-8.x-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/tomcat-thread-pool-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/apm-sdk-plugin/tomcat-thread-pool-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-http-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-http-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-threading-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-threading-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-threadpool-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../src/skywalking-java/apm-sniffer/bootstrap-plugins/jdk-threadpool-plugin/src/main/resources" charset="UTF-8" />
   </component>
 </project>

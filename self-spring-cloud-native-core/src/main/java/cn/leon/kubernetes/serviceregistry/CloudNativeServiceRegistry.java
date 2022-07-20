@@ -1,34 +1,35 @@
 package cn.leon.kubernetes.serviceregistry;
 
-
-import cn.leon.kubernetes.feign.KubernetesRegistryClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cloud.client.serviceregistry.ServiceRegistry;
 
+/**
+ * @author mujian
+ * @Classname CloudNativeServiceRegistry
+ * @Description
+ * @Date 2021/12/27
+ */
+
 public class CloudNativeServiceRegistry implements ServiceRegistry<CloudNativeRegistration> {
+    public static final Logger log = LoggerFactory.getLogger(CloudNativeServiceRegistry.class);
+    private CloudNativeRegisterService cloudNativeRegisterService;
 
-    private KubernetesRegistryClient kubernetesRegistryClient;
-
-    public CloudNativeServiceRegistry(KubernetesRegistryClient kubernetesRegistryClient) {
-        this.kubernetesRegistryClient = kubernetesRegistryClient;
+    public CloudNativeServiceRegistry(CloudNativeRegisterService cloudNativeRegisterService) {
+        this.cloudNativeRegisterService = cloudNativeRegisterService;
     }
-
 
     @Override
     public void register(CloudNativeRegistration registration) {
-        String registreing = kubernetesRegistryClient.register("registreing");
-        System.out.println(registreing + " .....");
-//        System.out.println("registreing .....");
-
+        cloudNativeRegisterService.register();
     }
 
     @Override
     public void deregister(CloudNativeRegistration registration) {
-        System.out.println("deregistering ...");
     }
 
     @Override
     public void close() {
-        System.out.println("closing ...");
     }
 
     @Override
@@ -42,3 +43,4 @@ public class CloudNativeServiceRegistry implements ServiceRegistry<CloudNativeRe
         return null;
     }
 }
+

@@ -1,8 +1,9 @@
 cn/leon/storage/service/StorageService.class
 cn/leon/storage/controller/StorageController.class
+cn/leon/storage/Order.class
 cn/leon/storage/StorageApplication.class
 cn/leon/storage/persistence/Storage.class
 cn/leon/storage/consumer/ConsumerService.class
-cn/leon/storage/config/RestTemplateConfig.class
+cn/leon/storage/Order$OrderBuilder.class
 cn/leon/storage/persistence/StorageMapper.class
 cn/leon/storage/config/DataSourceConfig.class

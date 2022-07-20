@@ -16,13 +16,14 @@ public class AccountService {
     private AccountMapper accountMapper;
 
     public void debit(String userId, BigDecimal num) {
-        Account account = accountMapper.selectByUserId(userId);
-        account.setMoney(account.getMoney().subtract(num));
-        accountMapper.updateById(account);
-
-        if (ERROR_USER_ID.equals(userId)) {
-            throw new RuntimeException("account branch exception");
-        }
+        System.out.println("accout decut");
+//        Account account = accountMapper.selectByUserId(userId);
+//        account.setMoney(account.getMoney().subtract(num));
+//        accountMapper.updateById(account);
+//
+//        if (ERROR_USER_ID.equals(userId)) {
+//            throw new RuntimeException("account branch exception");
+//        }
     }
 
 }

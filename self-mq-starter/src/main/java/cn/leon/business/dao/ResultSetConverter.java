@@ -1,4 +1,4 @@
-package cn.leon.mq.dao;
+package cn.leon.business.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

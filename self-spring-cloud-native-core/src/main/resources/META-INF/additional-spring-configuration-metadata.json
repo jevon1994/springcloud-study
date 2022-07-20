@@ -5,11 +5,6 @@
       "type": "java.lang.Boolean",
       "description": "config enabled",
       "defaultValue": true
-    },
-    {
-      "name": "k8s.ports",
-      "type": "cn.leon.kubernetes.Test",
-      "description": "config enabled"
     }
   ]
 }

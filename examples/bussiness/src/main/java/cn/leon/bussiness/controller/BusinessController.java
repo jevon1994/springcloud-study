@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,6 +15,8 @@ public class BusinessController {
 
     @Autowired
     private BusinessService businessService;
+
+    private RestTemplate restTemplate;
 
     /**
      * 购买下单，模拟全局事务提交

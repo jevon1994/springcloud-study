@@ -1,10 +1,7 @@
 package cn.leon.order.consumer;
 
-import cn.leon.order.sink.Sink;
+import cn.leon.order.sink.OrderSink;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.ErrorMessage;
@@ -16,7 +13,7 @@ import java.util.function.Consumer;
 @Service
 public class ConsumerService {
 
-    private Sink sink;
+    private OrderSink orderSink;
 
     /**
      * 消费分布式事务消息

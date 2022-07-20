@@ -1,4 +1,4 @@
-package cn.leon.es;
+package cn.leon.es.service;
 
 public interface IndexService {
 

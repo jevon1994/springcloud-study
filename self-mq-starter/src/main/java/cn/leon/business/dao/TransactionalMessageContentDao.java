@@ -1,7 +1,7 @@
-package cn.leon.mq.dao;
+package cn.leon.business.dao;
 
 
-import cn.leon.mq.model.TransactionalMessageContent;
+import cn.leon.business.model.TransactionalMessageContent;
 
 import java.util.List;
 

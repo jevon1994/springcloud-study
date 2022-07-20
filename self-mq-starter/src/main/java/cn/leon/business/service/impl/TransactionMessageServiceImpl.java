@@ -1,11 +1,11 @@
-package cn.leon.mq.service.impl;
+package cn.leon.business.service.impl;
 
-import cn.leon.mq.enums.DefaultDestination;
-import cn.leon.mq.enums.ExchangeType;
-import cn.leon.mq.model.DefaultTxMessage;
-import cn.leon.mq.model.TransactionalMessage;
-import cn.leon.mq.service.ITransactionMessageManagementService;
-import cn.leon.mq.service.ITransactionMessageService;
+import cn.leon.business.enums.DefaultDestination;
+import cn.leon.business.enums.ExchangeType;
+import cn.leon.business.model.DefaultTxMessage;
+import cn.leon.business.model.TransactionalMessage;
+import cn.leon.business.service.ITransactionMessageManagementService;
+import cn.leon.business.service.ITransactionMessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.*;
 import org.springframework.transaction.support.TransactionSynchronizationAdapter;

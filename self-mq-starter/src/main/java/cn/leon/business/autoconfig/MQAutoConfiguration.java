@@ -1,14 +1,14 @@
-package cn.leon.mq.autoconfig;
+package cn.leon.business.autoconfig;
 
-import cn.leon.mq.config.SelfTxChannelBindingTargetFactory;
-import cn.leon.mq.dao.TransactionalMessageContentDao;
-import cn.leon.mq.dao.TransactionalMessageDao;
-import cn.leon.mq.dao.impl.TransactionalMessageContentDaoImpl;
-import cn.leon.mq.dao.impl.TransactionalMessageDaoImpl;
-import cn.leon.mq.service.ITransactionMessageManagementService;
-import cn.leon.mq.service.ITransactionMessageService;
-import cn.leon.mq.service.impl.TransactionMessageManagementServiceImpl;
-import cn.leon.mq.service.impl.TransactionMessageServiceImpl;
+import cn.leon.business.config.SelfTxChannelBindingTargetFactory;
+import cn.leon.business.dao.TransactionalMessageContentDao;
+import cn.leon.business.dao.TransactionalMessageDao;
+import cn.leon.business.dao.impl.TransactionalMessageContentDaoImpl;
+import cn.leon.business.dao.impl.TransactionalMessageDaoImpl;
+import cn.leon.business.service.ITransactionMessageManagementService;
+import cn.leon.business.service.ITransactionMessageService;
+import cn.leon.business.service.impl.TransactionMessageManagementServiceImpl;
+import cn.leon.business.service.impl.TransactionMessageServiceImpl;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.cloud.stream.binder.rabbit.properties.RabbitExtendedBindingProperties;
